@@ -31,3 +31,20 @@ public class Biseccion {
 
         System.out.println("\nIteración\t a\t\t b\t\t c\t\t f(c)");
 
+// Iteraciones del método de bisección
+        while ((b - a) / 2 > tol && iter < maxIter) {
+            c = (a + b) / 2;
+            double fc = funcion(c);
+
+            System.out.printf("%d\t\t %.6f\t %.6f\t %.6f\t %.6f\n", iter + 1, a, b, c, fc);
+
+            if (fc == 0.0)
+                break; // Raíz exacta
+            else if (funcion(a) * fc < 0)
+                b = c;
+            else
+                a = c;
+
+            iter++;
+        }
+
