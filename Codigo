@@ -48,3 +48,14 @@ public class Biseccion {
             iter++;
         }
 
+  // Resultado final
+        System.out.printf("\nAproximación de la raíz: %.6f\n", c);
+        sc.close();
+    }
+
+    @Override
+    public String toString() {
+        return "Biseccion []";
+    }
+}
+
